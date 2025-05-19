@@ -48,7 +48,7 @@ async def cmd_start(message: Message):
             # Если не удалось получить статус режима сна, продолжаем работу
             await message.answer(
                 "Добро пожаловать в магазин!\n\n"
-                "Наш магазин работает до 01:00\n\n"
+                "Наш магазин работает до 23:00\n\n"
                 "👇Нажмите на ℹ️ Помощь, чтобы узнать подробнее👇",
                 reply_markup=main_menu()
             )
@@ -70,7 +70,7 @@ async def cmd_start(message: Message):
             
         await message.answer(
                 "Добро пожаловать в магазин!\n\n"
-                "Наш магазин работает до 01:00\n\n"
+                "Наш магазин работает до 23:00\n\n"
                 "👇Нажмите на ℹ️ Помощь, чтобы узнать подробнее👇",
             reply_markup=main_menu()
         )
@@ -78,7 +78,7 @@ async def cmd_start(message: Message):
         logger.error(f"Error in cmd_start: {str(e)}")
         await message.answer(
                 "Добро пожаловать в магазин!\n\n"
-                "Наш магазин работает до 01:00\n\n"
+                "Наш магазин работает до 23:00\n\n"
                 "👇Нажмите на ℹ️ Помощь, чтобы узнать подробнее👇",
             reply_markup=main_menu()
         )
@@ -139,7 +139,7 @@ async def show_category(callback: CallbackQuery, state: FSMContext):
                 # Add flavors to caption if they exist
                 flavors = product.get('flavors', [])
                 if flavors:
-                    caption += "🌈 Доступные вкусы:\n"
+                    caption += "🌈 Доступные размеры:\n"
                     for flavor in flavors:
                         flavor_name = flavor.get('name', '') if isinstance(flavor, dict) else flavor
                         flavor_quantity = flavor.get('quantity', 0) if isinstance(flavor, dict) else 0
@@ -183,7 +183,7 @@ async def handle_flavor_number(message: Message, state: FSMContext):
     try:
         # Get the number from message
         if not message.text.isdigit():
-            await message.answer("Пожалуйста, отправьте только номер вкуса")
+            await message.answer("Пожалуйста, отправьте только номер размера")
             return
             
         number = int(message.text)
@@ -255,7 +255,7 @@ async def handle_flavor_number(message: Message, state: FSMContext):
         
     except Exception as e:
         print(f"[ERROR] Error in handle_flavor_number: {str(e)}")
-        await message.answer("Произошла ошибка при выборе вкуса")
+        await message.answer("Произошла ошибка при выборе размера")
         await state.clear()
 
 @router.callback_query(F.data.startswith("select_flavor_"))
@@ -291,11 +291,11 @@ async def select_flavor(callback: CallbackQuery, state: FSMContext):
         flavor = next((f for f in flavors if f.get('name') == flavor_name), None)
         
         if not flavor:
-            await callback.answer("Выбранный вкус недоступен", show_alert=True)
+            await callback.answer("Выбранный размер недоступен", show_alert=True)
             return
             
         if flavor.get('quantity', 0) <= 0:
-            await callback.answer("К сожалению, этот вкус закончился", show_alert=True)
+            await callback.answer("К сожалению, этот размер закончился", show_alert=True)
             return
             
         # Get or create user
@@ -386,7 +386,7 @@ async def add_to_cart(callback: CallbackQuery):
             ])
             
             if not keyboard:  # If no flavors are in stock
-                await callback.answer("К сожалению, все вкусы закончились", show_alert=True)
+                await callback.answer("К сожалению, все товары закончились", show_alert=True)
                 return
             
             await callback.message.edit_caption(
@@ -985,7 +985,7 @@ async def show_help_menu(message: Message):
 async def show_contacts(callback: CallbackQuery):
     text = """📞 Наши контакты:
 
-Telegram: @Dimka_44"""
+Telegram: @your_telegram_username"""
     
     await callback.message.edit_text(text, reply_markup=help_menu())
     await callback.answer()
@@ -1020,7 +1020,7 @@ async def show_delivery_info(callback: CallbackQuery):
     text = """🚚 Информация о доставке:
 
 📦 О доставки:
-- Доставка курьером по городу(Только в черте города Павлодар)
+- Доставка курьером по городу
 
 ⏱ Сроки доставки:
 -В течении дня

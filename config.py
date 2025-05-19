@@ -10,18 +10,18 @@ ADMIN_CARD: str = os.getenv("ADMIN_CARD", "")  # Card number for payments
 
 # MongoDB Configuration
 MONGODB_URI: str = os.getenv("MONGODB_URI")
-DB_NAME: str = os.getenv("DB_NAME", "vapeshop_db")
+DB_NAME: str = os.getenv("DB_NAME", "maxshop_db")
 
 # Shop Configuration
-SHOP_NAME: str = os.getenv("SHOP_NAME", "VapeShop")
-CURRENCY: str = os.getenv("CURRENCY", "RUB")
+SHOP_NAME: str = os.getenv("MAXSHOP",)
+CURRENCY: str = os.getenv("CURRENCY", "TNG")
 
 # Product Categories
 CATEGORIES = [
-    "Одноразовые устройства",
-    "Жидкости",
-    "Снюс",
-    "Аксессуары"
+    "Тестовая категория",
+    "Тестовая категория 2",
+    "тестовая категория 3",
+    "Тестовая категория 4",
 ]
 
 # Order Statuses

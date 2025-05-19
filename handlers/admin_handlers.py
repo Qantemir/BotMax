@@ -334,7 +334,7 @@ async def edit_product_menu(callback: CallbackQuery, state: FSMContext):
         text += f"📝 Описание: {product['description']}\n"
         
         if 'flavors' in product and product['flavors']:
-            text += "\n🌈 Доступные вкусы:\n"
+            text += "\n🌈 Доступные размеры:\n"
             for flavor in product['flavors']:
                 flavor_name = flavor.get('name', '')
                 flavor_quantity = flavor.get('quantity', 0)
@@ -383,7 +383,7 @@ async def process_edit_name(message: Message, state: FSMContext):
             [InlineKeyboardButton(text="💰 Изменить цену", callback_data=f"edit_price_{product_id}")],
             [InlineKeyboardButton(text="📝 Изменить описание", callback_data=f"edit_description_{product_id}")],
             [InlineKeyboardButton(text="🖼 Изменить фото", callback_data=f"edit_photo_{product_id}")],
-            [InlineKeyboardButton(text="🌈 Управление вкусами", callback_data=f"manage_flavors_{product_id}")],
+            [InlineKeyboardButton(text="🌈 Управление размерами", callback_data=f"manage_flavors_{product_id}")],
             [InlineKeyboardButton(text="🔙 Назад", callback_data="back_to_product_management")]
         ]
         
@@ -477,7 +477,7 @@ async def process_edit_price(message: Message, state: FSMContext):
             [InlineKeyboardButton(text="💰 Изменить цену", callback_data=f"edit_price_{product_id}")],
             [InlineKeyboardButton(text="📝 Изменить описание", callback_data=f"edit_description_{product_id}")],
             [InlineKeyboardButton(text="🖼 Изменить фото", callback_data=f"edit_photo_{product_id}")],
-            [InlineKeyboardButton(text="🌈 Управление вкусами", callback_data=f"manage_flavors_{product_id}")],
+            [InlineKeyboardButton(text="🌈 Управление размерами", callback_data=f"manage_flavors_{product_id}")],
             [InlineKeyboardButton(text="🔙 Назад", callback_data="back_to_product_management")]
         ]
         
@@ -538,7 +538,7 @@ async def process_edit_description(message: Message, state: FSMContext):
             [InlineKeyboardButton(text="💰 Изменить цену", callback_data=f"edit_price_{product_id}")],
             [InlineKeyboardButton(text="📝 Изменить описание", callback_data=f"edit_description_{product_id}")],
             [InlineKeyboardButton(text="🖼 Изменить фото", callback_data=f"edit_photo_{product_id}")],
-            [InlineKeyboardButton(text="🌈 Управление вкусами", callback_data=f"manage_flavors_{product_id}")],
+            [InlineKeyboardButton(text="🌈 Управление размерами", callback_data=f"manage_flavors_{product_id}")],
             [InlineKeyboardButton(text="🔙 Назад", callback_data="back_to_product_management")]
         ]
         
@@ -548,7 +548,7 @@ async def process_edit_description(message: Message, state: FSMContext):
         text += f"📝 Описание: {product['description']}\n"
         
         if 'flavors' in product and product['flavors']:
-            text += "\n🌈 Доступные вкусы:\n"
+            text += "\n🌈 Доступные размеры:\n"
             for flavor in product['flavors']:
                 flavor_name = flavor.get('name', '')
                 flavor_quantity = flavor.get('quantity', 0)
@@ -617,7 +617,7 @@ async def process_edit_photo(message: Message, state: FSMContext):
             [InlineKeyboardButton(text="💰 Изменить цену", callback_data=f"edit_price_{product_id}")],
             [InlineKeyboardButton(text="📝 Изменить описание", callback_data=f"edit_description_{product_id}")],
             [InlineKeyboardButton(text="🖼 Изменить фото", callback_data=f"edit_photo_{product_id}")],
-            [InlineKeyboardButton(text="🌈 Управление вкусами", callback_data=f"manage_flavors_{product_id}")],
+            [InlineKeyboardButton(text="🌈 Управление размер", callback_data=f"manage_flavors_{product_id}")],
             [InlineKeyboardButton(text="🔙 Назад", callback_data="back_to_product_management")]
         ]
         
@@ -627,7 +627,7 @@ async def process_edit_photo(message: Message, state: FSMContext):
         text += f"📝 Описание: {product['description']}\n"
         
         if 'flavors' in product and product['flavors']:
-            text += "\n🌈 Доступные вкусы:\n"
+            text += "\n🌈 Доступные размеры:\n"
             for flavor in product['flavors']:
                 flavor_name = flavor.get('name', '')
                 flavor_quantity = flavor.get('quantity', 0)
@@ -1145,7 +1145,7 @@ async def manage_flavors(callback: CallbackQuery, state: FSMContext):
         
         # Add buttons for adding new flavor and going back
         keyboard.extend([
-            [InlineKeyboardButton(text="➕ Добавить вкус", callback_data=f"add_flavor_{product_id}")],
+            [InlineKeyboardButton(text="➕ Добавить размер", callback_data=f"add_flavor_{product_id}")],
             [InlineKeyboardButton(text="🔙 Назад", callback_data=f"edit_product_{product_id}")]
         ])
         
@@ -1210,14 +1210,14 @@ async def delete_flavor(callback: CallbackQuery):
                     )
                 ])
             keyboard.extend([
-                [InlineKeyboardButton(text="➕ Добавить вкус", callback_data=f"add_flavor_{product_id}")],
+                [InlineKeyboardButton(text="➕ Добавить размер", callback_data=f"add_flavor_{product_id}")],
                 [InlineKeyboardButton(text="🔙 Назад", callback_data=f"edit_product_{product_id}")]
             ])
             
             markup = InlineKeyboardMarkup(inline_keyboard=keyboard)
             
             # Update message
-            text = "🌈 Управление вкусами\n\n"
+            text = "🌈 Управление размер\n\n"
             if flavors:
                 text += "Текущие вкусы:\n"
                 for i, flavor in enumerate(flavors, 1):
@@ -1324,14 +1324,14 @@ async def process_flavor_quantity(message: Message, state: FSMContext):
                     )
                 ])
             keyboard.extend([
-                [InlineKeyboardButton(text="➕ Добавить вкус", callback_data=f"add_flavor_{product_id}")],
+                [InlineKeyboardButton(text="➕ Добавить размер", callback_data=f"add_flavor_{product_id}")],
                 [InlineKeyboardButton(text="🔙 Назад", callback_data=f"edit_product_{product_id}")]
             ])
             
             markup = InlineKeyboardMarkup(inline_keyboard=keyboard)
             
             # Show current flavors and options
-            text = "🌈 Управление вкусами\n\n"
+            text = "🌈 Управление размерами\n\n"
             if flavors:
                 text += "Текущие вкусы:\n"
                 for i, flavor in enumerate(flavors, 1):
@@ -1339,13 +1339,13 @@ async def process_flavor_quantity(message: Message, state: FSMContext):
                     flavor_quantity = flavor.get('quantity', 0)
                     text += f"{i}. {flavor_name} - {flavor_quantity} шт.\n"
             else:
-                text += "У товара пока нет вкусов\n"
+                text += "У товара пока нет размероа\n"
             
             text += "\nНажмите на вкус чтобы удалить его, или добавьте новый"
             
             await message.answer(text, reply_markup=markup)
         else:
-            await message.answer("Вкус не найден")
+            await message.answer("Размер не найден")
             
         await state.clear()
         
@@ -1367,7 +1367,7 @@ async def start_add_flavor(callback: CallbackQuery, state: FSMContext):
             
         await state.update_data(editing_product_id=product_id)
         await callback.message.edit_text(
-            "Введите название нового вкуса:",
+            "Введите новый размер:",
             reply_markup=InlineKeyboardMarkup(inline_keyboard=[[
                 InlineKeyboardButton(text="🔙 Отмена", callback_data=f"manage_flavors_{product_id}")
             ]])
@@ -1405,7 +1405,7 @@ async def process_add_flavor(message: Message, state: FSMContext):
         if any(flavor.get('name') == new_flavor for flavor in flavors):
             await message.answer(
                 "Такой вкус уже существует!\n"
-                "Введите другой вкус или нажмите Отмена для возврата.",
+                "Введите другой товар или нажмите Отмена для возврата.",
                 reply_markup=InlineKeyboardMarkup(inline_keyboard=[[
                     InlineKeyboardButton(text="🔙 Отмена", callback_data=f"manage_flavors_{product_id}")
                 ]])
@@ -1446,7 +1446,7 @@ async def process_add_flavor(message: Message, state: FSMContext):
         markup = InlineKeyboardMarkup(inline_keyboard=keyboard)
         
         # Show current flavors and options
-        text = "🌈 Управление вкусами\n\n"
+        text = "🌈 Управление размерами\n\n"
         if flavors:
             text += "Текущие вкусы:\n"
             for i, flavor in enumerate(flavors, 1):
@@ -1454,16 +1454,16 @@ async def process_add_flavor(message: Message, state: FSMContext):
                 flavor_quantity = flavor.get('quantity', 0)
                 text += f"{i}. {flavor_name} - {flavor_quantity} шт.\n"
         else:
-            text += "У товара пока нет вкусов\n"
+            text += "У товара пока нет размеров\n"
         
-        text += "\nНажмите на вкус чтобы удалить его, или добавьте новый"
+        text += "\nНажмите на размер чтобы удалить его, или добавьте размер"
         
         await message.answer(text, reply_markup=markup)
         await state.clear()
         
     except Exception as e:
         print(f"[ERROR] Error in process_add_flavor: {str(e)}")
-        await message.answer("Произошла ошибка при добавлении вкуса")
+        await message.answer("Произошла ошибка при добавлении размер")
         await state.clear()
 
 @router.callback_query(F.data == "manage_flavors")
@@ -1496,7 +1496,7 @@ async def show_products_for_flavors(callback: CallbackQuery):
         markup = InlineKeyboardMarkup(inline_keyboard=keyboard)
         
         await callback.message.edit_text(
-            "Выберите товар для управления вкусами:",
+            "Выберите товар для управления размером:",
             reply_markup=markup
         )
         await callback.answer()
@@ -1523,7 +1523,7 @@ async def show_admin_help(message: Message):
    • Установите цену
    • Добавьте описание
    • Загрузите фото
-   • Настройте вкусы и их количество
+   • Настройте размеры и их количество
 
 2️⃣ <b>Редактирование товара:</b>
    • Изменение названия
@@ -1533,10 +1533,10 @@ async def show_admin_help(message: Message):
    • Управление вкусами и их количеством
 
 3️⃣ <b>Управление вкусами:</b>
-   • Добавление новых вкусов
-   • Удаление существующих вкусов
+   • Добавление новых размеров
+   • Удаление существующих размерров
    • Установка количества для каждого вкуса
-   • Просмотр текущих вкусов и их количества
+   • Просмотр текущих размеров и их количества
 
 <b>📊 ЗАКАЗЫ</b>
 • Просмотр всех заказов
@@ -1571,7 +1571,7 @@ async def show_admin_help(message: Message):
 • Своевременно обновляйте информацию о товарах
 • Используйте качественные фото
 • Пишите понятные описания
-• Следите за количеством вкусов
+• Следите за количеством размеров
 • Проверяйте статус режима сна
 """
     
@@ -1599,20 +1599,20 @@ async def admin_help_callback(callback: CallbackQuery):
    • Установите цену
    • Добавьте описание
    • Загрузите фото
-   • Настройте вкусы и их количество
+   • Настройте размеры и их количество
 
 2️⃣ <b>Редактирование товара:</b>
    • Изменение названия
    • Корректировка цены
    • Обновление описания
    • Замена фото
-   • Управление вкусами и их количеством
+   • Управление размеры и их количеством
 
 3️⃣ <b>Управление вкусами:</b>
-   • Добавление новых вкусов
-   • Удаление существующих вкусов
-   • Установка количества для каждого вкуса
-   • Просмотр текущих вкусов и их количества
+   • Добавление новых размеров
+   • Удаление существующих размеров
+   • Установка количества для каждого размера
+   • Просмотр текущих размеров и их количества
 
 <b>📊 ЗАКАЗЫ</b>
 • Просмотр всех заказов
@@ -1647,7 +1647,7 @@ async def admin_help_callback(callback: CallbackQuery):
 • Своевременно обновляйте информацию о товарах
 • Используйте качественные фото
 • Пишите понятные описания
-• Следите за количеством вкусов
+• Следите за количеством размеров
 • Проверяйте статус режима сна
 """
     

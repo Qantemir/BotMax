@@ -24,7 +24,7 @@ def product_management_kb() -> InlineKeyboardMarkup:
         ],
         [
             InlineKeyboardButton(text="❌ Удалить товар", callback_data="delete_product"),
-            InlineKeyboardButton(text="🌈 Вкусы", callback_data="manage_flavors")
+            InlineKeyboardButton(text="🌈 размер", callback_data="manage_flavors")
         ],
         [
             InlineKeyboardButton(text="📋 Список товаров", callback_data="list_products"),

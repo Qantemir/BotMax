@@ -48,7 +48,7 @@ def product_actions_kb(product_id: str, in_cart: bool = False, flavors: list = N
             
         if not any(buttons):  # If no flavors are in stock
             buttons.append([InlineKeyboardButton(
-                text="❌ Нет доступных вкусов",
+                text="❌ Нет доступных размеров",
                 callback_data="no_flavors"
             )])
     elif not in_cart:
