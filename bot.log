@@ -72,3 +72,615 @@
 2025-05-19 23:23:28,397 - aiogram.dispatcher - INFO - Polling stopped
 2025-05-19 23:23:28,661 - aiogram.dispatcher - INFO - Polling stopped for bot @maksos_shop_bot id=7685552550 - 'MaxBOT'
 2025-05-19 23:23:28,663 - root - INFO - Bot stopped
+2025-05-19 23:23:35,431 - __main__ - INFO - Starting bot...
+2025-05-19 23:23:35,432 - aiogram.dispatcher - INFO - Start polling
+2025-05-19 23:23:38,753 - aiogram.dispatcher - INFO - Run polling for bot @platform_shop_bot id=7573060547 - 'Platform_shop_bot'
+2025-05-19 23:23:42,316 - database.mongodb - INFO - Attempting to connect to MongoDB at 
+2025-05-19 23:23:42,317 - database.mongodb - ERROR - Unexpected error connecting to MongoDB: Empty host (or extra comma in host list)
+2025-05-19 23:23:42,318 - database.mongodb - ERROR - Error getting sleep mode: Empty host (or extra comma in host list)
+2025-05-19 23:23:42,751 - aiogram.event - INFO - Update id=102964010 is handled. Duration 435 ms by bot id=7573060547
+2025-05-19 23:23:45,483 - database.mongodb - INFO - Attempting to connect to MongoDB at 
+2025-05-19 23:23:45,484 - database.mongodb - ERROR - Unexpected error connecting to MongoDB: Empty host (or extra comma in host list)
+2025-05-19 23:23:45,484 - database.mongodb - ERROR - Error getting sleep mode: Empty host (or extra comma in host list)
+2025-05-19 23:23:45,680 - aiogram.event - INFO - Update id=102964011 is handled. Duration 213 ms by bot id=7573060547
+2025-05-19 23:23:49,723 - database.mongodb - INFO - [DEBUG] Getting products for category: Тестовая категория
+2025-05-19 23:23:49,723 - database.mongodb - ERROR - [ERROR] Error getting products for category Тестовая категория: 'NoneType' object has no attribute 'products'
+2025-05-19 23:23:49,886 - aiogram.event - INFO - Update id=102964012 is handled. Duration 164 ms by bot id=7573060547
+2025-05-19 23:23:58,467 - aiogram.event - INFO - Update id=102964013 is handled. Duration 175 ms by bot id=7573060547
+2025-05-19 23:24:03,217 - handlers.admin_handlers - INFO - Successful admin login for user 531632690
+2025-05-19 23:24:03,407 - aiogram.event - INFO - Update id=102964014 is handled. Duration 209 ms by bot id=7573060547
+2025-05-19 23:24:05,415 - aiogram.event - INFO - Update id=102964015 is handled. Duration 187 ms by bot id=7573060547
+2025-05-19 23:24:08,841 - aiogram.event - INFO - Update id=102964016 is handled. Duration 267 ms by bot id=7573060547
+2025-05-19 23:24:12,240 - aiogram.event - INFO - Update id=102964017 is handled. Duration 355 ms by bot id=7573060547
+2025-05-19 23:24:14,167 - aiogram.event - INFO - Update id=102964018 is handled. Duration 312 ms by bot id=7573060547
+2025-05-19 23:24:16,909 - aiogram.event - INFO - Update id=102964019 is handled. Duration 167 ms by bot id=7573060547
+2025-05-19 23:24:20,921 - aiogram.event - INFO - Update id=102964020 is handled. Duration 249 ms by bot id=7573060547
+2025-05-19 23:24:24,179 - aiogram.event - INFO - Update id=102964021 is handled. Duration 169 ms by bot id=7573060547
+2025-05-19 23:24:29,013 - database.mongodb - ERROR - Error adding product: 'NoneType' object has no attribute 'products'
+2025-05-19 23:24:29,199 - aiogram.event - INFO - Update id=102964022 is handled. Duration 190 ms by bot id=7573060547
+2025-05-19 23:24:30,945 - aiogram.event - INFO - Update id=102964023 is not handled. Duration 6 ms by bot id=7573060547
+2025-05-19 23:24:30,946 - aiogram.event - ERROR - Cause exception while process update id=102964023 by bot id=7573060547
+AttributeError: 'NoneType' object has no attribute 'products'
+Traceback (most recent call last):
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\Desktop\BotMax\handlers\admin_handlers.py", line 72, in wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\Desktop\BotMax\handlers\admin_handlers.py", line 199, in list_products
+    products = await db.get_all_products()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\Desktop\BotMax\database\mongodb.py", line 227, in get_all_products
+    cursor = self.db.products.find()
+             ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'products'
+2025-05-19 23:24:34,979 - aiogram.event - INFO - Update id=102964024 is not handled. Duration 5 ms by bot id=7573060547
+2025-05-19 23:24:34,981 - aiogram.event - ERROR - Cause exception while process update id=102964024 by bot id=7573060547
+AttributeError: 'NoneType' object has no attribute 'products'
+Traceback (most recent call last):
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\Desktop\BotMax\handlers\admin_handlers.py", line 72, in wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\Desktop\BotMax\handlers\admin_handlers.py", line 199, in list_products
+    products = await db.get_all_products()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\Desktop\BotMax\database\mongodb.py", line 227, in get_all_products
+    cursor = self.db.products.find()
+             ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'products'
+2025-05-19 23:24:35,887 - aiogram.event - INFO - Update id=102964025 is not handled. Duration 7 ms by bot id=7573060547
+2025-05-19 23:24:35,887 - aiogram.event - ERROR - Cause exception while process update id=102964025 by bot id=7573060547
+AttributeError: 'NoneType' object has no attribute 'products'
+Traceback (most recent call last):
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\Desktop\BotMax\handlers\admin_handlers.py", line 72, in wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\Desktop\BotMax\handlers\admin_handlers.py", line 199, in list_products
+    products = await db.get_all_products()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\Desktop\BotMax\database\mongodb.py", line 227, in get_all_products
+    cursor = self.db.products.find()
+             ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'products'
+2025-05-19 23:24:36,927 - aiogram.event - INFO - Update id=102964026 is not handled. Duration 5 ms by bot id=7573060547
+2025-05-19 23:24:36,927 - aiogram.event - ERROR - Cause exception while process update id=102964026 by bot id=7573060547
+AttributeError: 'NoneType' object has no attribute 'products'
+Traceback (most recent call last):
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\Desktop\BotMax\handlers\admin_handlers.py", line 72, in wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\Desktop\BotMax\handlers\admin_handlers.py", line 199, in list_products
+    products = await db.get_all_products()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\Desktop\BotMax\database\mongodb.py", line 227, in get_all_products
+    cursor = self.db.products.find()
+             ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'products'
+2025-05-19 23:24:37,635 - aiogram.event - INFO - Update id=102964027 is not handled. Duration 9 ms by bot id=7573060547
+2025-05-19 23:24:37,636 - aiogram.event - ERROR - Cause exception while process update id=102964027 by bot id=7573060547
+AttributeError: 'NoneType' object has no attribute 'products'
+Traceback (most recent call last):
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\Desktop\BotMax\handlers\admin_handlers.py", line 72, in wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\Desktop\BotMax\handlers\admin_handlers.py", line 199, in list_products
+    products = await db.get_all_products()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\Desktop\BotMax\database\mongodb.py", line 227, in get_all_products
+    cursor = self.db.products.find()
+             ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'products'
+2025-05-19 23:24:39,590 - database.mongodb - ERROR - [ERROR] Failed to delete old orders: 'NoneType' object has no attribute 'orders'
+2025-05-19 23:24:39,770 - aiogram.event - INFO - Update id=102964028 is handled. Duration 184 ms by bot id=7573060547
+2025-05-19 23:24:45,097 - aiogram.event - INFO - Update id=102964029 is not handled. Duration 6 ms by bot id=7573060547
+2025-05-19 23:24:45,097 - aiogram.event - ERROR - Cause exception while process update id=102964029 by bot id=7573060547
+AttributeError: 'NoneType' object has no attribute 'products'
+Traceback (most recent call last):
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\Desktop\BotMax\handlers\admin_handlers.py", line 72, in wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\Desktop\BotMax\handlers\admin_handlers.py", line 199, in list_products
+    products = await db.get_all_products()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\Desktop\BotMax\database\mongodb.py", line 227, in get_all_products
+    cursor = self.db.products.find()
+             ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'products'
+2025-05-19 23:24:46,120 - aiogram.event - INFO - Update id=102964030 is not handled. Duration 6 ms by bot id=7573060547
+2025-05-19 23:24:46,120 - aiogram.event - ERROR - Cause exception while process update id=102964030 by bot id=7573060547
+AttributeError: 'NoneType' object has no attribute 'products'
+Traceback (most recent call last):
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\Desktop\BotMax\handlers\admin_handlers.py", line 72, in wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\Desktop\BotMax\handlers\admin_handlers.py", line 247, in edit_products_list
+    products = await db.get_all_products()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\Desktop\BotMax\database\mongodb.py", line 227, in get_all_products
+    cursor = self.db.products.find()
+             ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'products'
+2025-05-19 23:24:48,428 - aiogram.event - INFO - Update id=102964031 is not handled. Duration 6 ms by bot id=7573060547
+2025-05-19 23:24:48,429 - aiogram.event - ERROR - Cause exception while process update id=102964031 by bot id=7573060547
+AttributeError: 'NoneType' object has no attribute 'products'
+Traceback (most recent call last):
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        observer=observer, update_type=update_type, event=telegram_event, **data
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\Desktop\BotMax\handlers\admin_handlers.py", line 72, in wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\Desktop\BotMax\handlers\admin_handlers.py", line 275, in delete_product_list
+    products = await db.get_all_products()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\r-keeper\Desktop\BotMax\database\mongodb.py", line 227, in get_all_products
+    cursor = self.db.products.find()
+             ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'products'
