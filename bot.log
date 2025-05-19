@@ -684,3 +684,129 @@ Traceback (most recent call last):
     cursor = self.db.products.find()
              ^^^^^^^^^^^^^^^^
 AttributeError: 'NoneType' object has no attribute 'products'
+2025-05-19 23:28:07,073 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-05-19 23:28:07,073 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7573060547)
+2025-05-19 23:28:12,398 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-05-19 23:28:12,398 - aiogram.dispatcher - WARNING - Sleep for 1.403470 seconds and try again... (tryings = 1, bot id = 7573060547)
+2025-05-19 23:28:18,474 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-05-19 23:28:18,474 - aiogram.dispatcher - WARNING - Sleep for 1.989511 seconds and try again... (tryings = 2, bot id = 7573060547)
+2025-05-19 23:28:25,497 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-05-19 23:28:25,497 - aiogram.dispatcher - WARNING - Sleep for 2.497594 seconds and try again... (tryings = 3, bot id = 7573060547)
+2025-05-19 23:28:33,396 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-05-19 23:28:33,396 - aiogram.dispatcher - WARNING - Sleep for 3.161316 seconds and try again... (tryings = 4, bot id = 7573060547)
+2025-05-19 23:28:42,566 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-05-19 23:28:42,566 - aiogram.dispatcher - WARNING - Sleep for 4.073702 seconds and try again... (tryings = 5, bot id = 7573060547)
+2025-05-19 23:28:50,581 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-05-19 23:28:50,582 - aiogram.dispatcher - WARNING - Sleep for 4.942596 seconds and try again... (tryings = 6, bot id = 7573060547)
+2025-05-19 23:28:57,988 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-19 23:28:58,253 - aiogram.dispatcher - INFO - Polling stopped for bot @platform_shop_bot id=7573060547 - 'Platform_shop_bot'
+2025-05-19 23:28:58,255 - root - INFO - Bot stopped
+2025-05-19 23:38:25,036 - __main__ - CRITICAL - Critical error while running bot: Passing `parse_mode`, `disable_web_page_preview` or `protect_content` to Bot initializer is not supported anymore. These arguments have been removed in 3.7.0 version. Use `default=DefaultBotProperties(parse_mode='HTML')` argument instead.
+Traceback (most recent call last):
+  File "C:\Users\r-keeper\Desktop\BotMax\bot.py", line 87, in main
+    bot = Bot(token=config.BOT_TOKEN, parse_mode="HTML")
+  File "C:\Users\r-keeper\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiogram\client\bot.py", line 294, in __init__
+    raise TypeError(
+    ...<3 lines>...
+    )
+TypeError: Passing `parse_mode`, `disable_web_page_preview` or `protect_content` to Bot initializer is not supported anymore. These arguments have been removed in 3.7.0 version. Use `default=DefaultBotProperties(parse_mode='HTML')` argument instead.
+2025-05-19 23:38:25,042 - root - INFO - Bot stopped gracefully
+2025-05-19 23:39:04,451 - __main__ - INFO - Starting bot...
+2025-05-19 23:39:04,454 - aiogram.dispatcher - INFO - Start polling
+2025-05-19 23:39:04,880 - aiogram.dispatcher - INFO - Run polling for bot @platform_shop_bot id=7573060547 - 'Platform_shop_bot'
+2025-05-19 23:39:05,076 - database.mongodb - INFO - Attempting to connect to MongoDB at mongodb+srv://mksimantipev228:CHD5QbOKaUwhZXj1@shopbot.ozvfezb.mongodb.net/?retryWrites=true&w=majority&appName=ShopBot
+2025-05-19 23:39:09,481 - database.mongodb - INFO - Database indexes created successfully
+2025-05-19 23:39:10,436 - database.mongodb - INFO - Initialized default sleep mode settings
+2025-05-19 23:39:10,436 - database.mongodb - INFO - Successfully connected to MongoDB database: maxshop_db
+2025-05-19 23:39:11,138 - aiogram.event - INFO - Update id=102964036 is handled. Duration 6075 ms by bot id=7573060547
+2025-05-19 23:39:13,558 - aiogram.event - INFO - Update id=102964037 is handled. Duration 353 ms by bot id=7573060547
+2025-05-19 23:39:15,004 - database.mongodb - INFO - [DEBUG] Getting products for category: Тестовая категория
+2025-05-19 23:39:15,210 - database.mongodb - INFO - [DEBUG] Found 0 products in category Тестовая категория
+2025-05-19 23:39:15,369 - aiogram.event - INFO - Update id=102964038 is handled. Duration 365 ms by bot id=7573060547
+2025-05-19 23:39:20,048 - aiogram.event - INFO - Update id=102964039 is handled. Duration 568 ms by bot id=7573060547
+2025-05-19 23:39:21,767 - aiogram.event - INFO - Update id=102964040 is handled. Duration 169 ms by bot id=7573060547
+2025-05-19 23:39:23,461 - aiogram.event - INFO - Update id=102964041 is handled. Duration 298 ms by bot id=7573060547
+2025-05-19 23:39:28,412 - aiogram.event - INFO - Update id=102964042 is handled. Duration 306 ms by bot id=7573060547
+2025-05-19 23:39:29,790 - aiogram.event - INFO - Update id=102964043 is handled. Duration 308 ms by bot id=7573060547
+2025-05-19 23:39:31,378 - aiogram.event - INFO - Update id=102964044 is handled. Duration 482 ms by bot id=7573060547
+2025-05-19 23:39:37,571 - aiogram.event - INFO - Update id=102964045 is handled. Duration 180 ms by bot id=7573060547
+2025-05-19 23:39:42,384 - handlers.admin_handlers - INFO - Successful admin login for user 531632690
+2025-05-19 23:39:42,633 - aiogram.event - INFO - Update id=102964046 is handled. Duration 251 ms by bot id=7573060547
+2025-05-19 23:39:44,405 - aiogram.event - INFO - Update id=102964047 is handled. Duration 277 ms by bot id=7573060547
+2025-05-19 23:39:46,039 - aiogram.event - INFO - Update id=102964048 is handled. Duration 618 ms by bot id=7573060547
+2025-05-19 23:39:47,472 - aiogram.event - INFO - Update id=102964049 is handled. Duration 320 ms by bot id=7573060547
+2025-05-19 23:39:50,179 - aiogram.event - INFO - Update id=102964050 is handled. Duration 172 ms by bot id=7573060547
+2025-05-19 23:39:52,162 - aiogram.event - INFO - Update id=102964051 is handled. Duration 167 ms by bot id=7573060547
+2025-05-19 23:39:54,391 - aiogram.event - INFO - Update id=102964052 is handled. Duration 189 ms by bot id=7573060547
+2025-05-19 23:39:59,637 - aiogram.event - INFO - Update id=102964053 is handled. Duration 369 ms by bot id=7573060547
+2025-05-19 23:40:01,933 - aiogram.event - INFO - Update id=102964054 is handled. Duration 671 ms by bot id=7573060547
+2025-05-19 23:40:04,556 - aiogram.event - INFO - Update id=102964055 is handled. Duration 519 ms by bot id=7573060547
+2025-05-19 23:40:05,667 - database.mongodb - INFO - [DEBUG] Attempting to get product with ID: 682b7affb5434504b423b164
+2025-05-19 23:40:05,882 - database.mongodb - INFO - [DEBUG] Found product in database: {'_id': ObjectId('682b7affb5434504b423b164'), 'name': 'Dndjdj', 'category': 'Тестовая категория 2', 'price': 48484, 'description': 'Jfjfjf', 'photo': 'AgACAgIAAxkBAAMSaCt3XR9e4CkdiVfqyED6rvsypCgAAtnyMRvJFVhJO-y7cEK3j5wBAAMCAAN5AAM2BA', 'available': True}
+2025-05-19 23:40:05,883 - database.mongodb - INFO - [DEBUG] Converted product ID to string: 682b7affb5434504b423b164
+2025-05-19 23:40:06,213 - aiogram.event - INFO - Update id=102964056 is handled. Duration 552 ms by bot id=7573060547
+2025-05-19 23:40:07,847 - database.mongodb - INFO - [DEBUG] Attempting to get product with ID: 682b7affb5434504b423b164
+2025-05-19 23:40:08,052 - database.mongodb - INFO - [DEBUG] Found product in database: {'_id': ObjectId('682b7affb5434504b423b164'), 'name': 'Dndjdj', 'category': 'Тестовая категория 2', 'price': 48484, 'description': 'Jfjfjf', 'photo': 'AgACAgIAAxkBAAMSaCt3XR9e4CkdiVfqyED6rvsypCgAAtnyMRvJFVhJO-y7cEK3j5wBAAMCAAN5AAM2BA', 'available': True}
+2025-05-19 23:40:08,053 - database.mongodb - INFO - [DEBUG] Converted product ID to string: 682b7affb5434504b423b164
+2025-05-19 23:40:08,392 - aiogram.event - INFO - Update id=102964057 is handled. Duration 552 ms by bot id=7573060547
+2025-05-19 23:40:09,427 - database.mongodb - INFO - [DEBUG] Attempting to get product with ID: 682b7affb5434504b423b164
+2025-05-19 23:40:09,633 - database.mongodb - INFO - [DEBUG] Found product in database: {'_id': ObjectId('682b7affb5434504b423b164'), 'name': 'Dndjdj', 'category': 'Тестовая категория 2', 'price': 48484, 'description': 'Jfjfjf', 'photo': 'AgACAgIAAxkBAAMSaCt3XR9e4CkdiVfqyED6rvsypCgAAtnyMRvJFVhJO-y7cEK3j5wBAAMCAAN5AAM2BA', 'available': True}
+2025-05-19 23:40:09,635 - database.mongodb - INFO - [DEBUG] Converted product ID to string: 682b7affb5434504b423b164
+2025-05-19 23:40:09,953 - aiogram.event - INFO - Update id=102964058 is handled. Duration 534 ms by bot id=7573060547
+2025-05-19 23:40:15,969 - database.mongodb - INFO - [DEBUG] Attempting to get product with ID: 682b7affb5434504b423b164
+2025-05-19 23:40:16,171 - database.mongodb - INFO - [DEBUG] Found product in database: {'_id': ObjectId('682b7affb5434504b423b164'), 'name': 'Dndjdj', 'category': 'Тестовая категория 2', 'price': 48484, 'description': 'Jfjfjf', 'photo': 'AgACAgIAAxkBAAMSaCt3XR9e4CkdiVfqyED6rvsypCgAAtnyMRvJFVhJO-y7cEK3j5wBAAMCAAN5AAM2BA', 'available': True}
+2025-05-19 23:40:16,172 - database.mongodb - INFO - [DEBUG] Converted product ID to string: 682b7affb5434504b423b164
+2025-05-19 23:40:16,681 - aiogram.event - INFO - Update id=102964059 is handled. Duration 718 ms by bot id=7573060547
+2025-05-19 23:40:21,815 - database.mongodb - INFO - [DEBUG] Attempting to get product with ID: 682b7affb5434504b423b164
+2025-05-19 23:40:22,031 - database.mongodb - INFO - [DEBUG] Found product in database: {'_id': ObjectId('682b7affb5434504b423b164'), 'name': 'Dndjdj', 'category': 'Тестовая категория 2', 'price': 48484, 'description': 'Jfjfjf', 'photo': 'AgACAgIAAxkBAAMSaCt3XR9e4CkdiVfqyED6rvsypCgAAtnyMRvJFVhJO-y7cEK3j5wBAAMCAAN5AAM2BA', 'available': True, 'flavors': [{'name': '20', 'quantity': 0}]}
+2025-05-19 23:40:22,032 - database.mongodb - INFO - [DEBUG] Converted product ID to string: 682b7affb5434504b423b164
+2025-05-19 23:40:22,366 - aiogram.event - INFO - Update id=102964060 is handled. Duration 558 ms by bot id=7573060547
+2025-05-19 23:40:25,394 - database.mongodb - INFO - [DEBUG] Attempting to get product with ID: 682b7affb5434504b423b164
+2025-05-19 23:40:25,603 - database.mongodb - INFO - [DEBUG] Found product in database: {'_id': ObjectId('682b7affb5434504b423b164'), 'name': 'Dndjdj', 'category': 'Тестовая категория 2', 'price': 48484, 'description': 'Jfjfjf', 'photo': 'AgACAgIAAxkBAAMSaCt3XR9e4CkdiVfqyED6rvsypCgAAtnyMRvJFVhJO-y7cEK3j5wBAAMCAAN5AAM2BA', 'available': True, 'flavors': [{'name': '20', 'quantity': 0}]}
+2025-05-19 23:40:25,604 - database.mongodb - INFO - [DEBUG] Converted product ID to string: 682b7affb5434504b423b164
+2025-05-19 23:40:26,042 - aiogram.event - INFO - Update id=102964061 is handled. Duration 653 ms by bot id=7573060547
+2025-05-19 23:40:29,361 - database.mongodb - INFO - [DEBUG] Attempting to get product with ID: 682b7affb5434504b423b164
+2025-05-19 23:40:29,577 - database.mongodb - INFO - [DEBUG] Found product in database: {'_id': ObjectId('682b7affb5434504b423b164'), 'name': 'Dndjdj', 'category': 'Тестовая категория 2', 'price': 48484, 'description': 'Jfjfjf', 'photo': 'AgACAgIAAxkBAAMSaCt3XR9e4CkdiVfqyED6rvsypCgAAtnyMRvJFVhJO-y7cEK3j5wBAAMCAAN5AAM2BA', 'available': True, 'flavors': [{'name': '20', 'quantity': 20}]}
+2025-05-19 23:40:29,578 - database.mongodb - INFO - [DEBUG] Converted product ID to string: 682b7affb5434504b423b164
+2025-05-19 23:40:30,117 - aiogram.event - INFO - Update id=102964062 is handled. Duration 762 ms by bot id=7573060547
+2025-05-19 23:40:31,661 - aiogram.event - INFO - Update id=102964063 is handled. Duration 468 ms by bot id=7573060547
+2025-05-19 23:40:35,628 - aiogram.event - INFO - Update id=102964064 is handled. Duration 532 ms by bot id=7573060547
+2025-05-19 23:40:40,721 - aiogram.event - INFO - Update id=102964065 is handled. Duration 198 ms by bot id=7573060547
+2025-05-19 23:40:44,292 - aiogram.event - INFO - Update id=102964066 is handled. Duration 195 ms by bot id=7573060547
+2025-05-19 23:40:46,549 - aiogram.event - INFO - Update id=102964067 is handled. Duration 400 ms by bot id=7573060547
+2025-05-19 23:40:47,737 - database.mongodb - INFO - [DEBUG] Getting products for category: Тестовая категория 2
+2025-05-19 23:40:47,950 - database.mongodb - INFO - [DEBUG] Found 1 products in category Тестовая категория 2
+2025-05-19 23:40:48,360 - aiogram.event - INFO - Update id=102964068 is handled. Duration 623 ms by bot id=7573060547
+2025-05-19 23:40:50,162 - handlers.user_handlers - INFO - Starting select_flavor handler
+2025-05-19 23:40:50,163 - database.mongodb - INFO - [DEBUG] Attempting to get product with ID: 682b7affb5434504b423b164
+2025-05-19 23:40:50,377 - database.mongodb - INFO - [DEBUG] Found product in database: {'_id': ObjectId('682b7affb5434504b423b164'), 'name': 'Dndjdj', 'category': 'Тестовая категория 2', 'price': 48484, 'description': 'Jfjfjf', 'photo': 'AgACAgIAAxkBAAMSaCt3XR9e4CkdiVfqyED6rvsypCgAAtnyMRvJFVhJO-y7cEK3j5wBAAMCAAN5AAM2BA', 'available': True, 'flavors': [{'name': '20', 'quantity': 20}]}
+2025-05-19 23:40:50,378 - database.mongodb - INFO - [DEBUG] Converted product ID to string: 682b7affb5434504b423b164
+2025-05-19 23:40:50,825 - handlers.user_handlers - INFO - Created new user: 531632690
+2025-05-19 23:40:51,497 - aiogram.event - INFO - Update id=102964069 is handled. Duration 1335 ms by bot id=7573060547
+2025-05-19 23:40:54,435 - database.mongodb - INFO - [DEBUG] Attempting to get product with ID: 682b7affb5434504b423b164
+2025-05-19 23:40:54,648 - database.mongodb - INFO - [DEBUG] Found product in database: {'_id': ObjectId('682b7affb5434504b423b164'), 'name': 'Dndjdj', 'category': 'Тестовая категория 2', 'price': 48484, 'description': 'Jfjfjf', 'photo': 'AgACAgIAAxkBAAMSaCt3XR9e4CkdiVfqyED6rvsypCgAAtnyMRvJFVhJO-y7cEK3j5wBAAMCAAN5AAM2BA', 'available': True, 'flavors': [{'name': '20', 'quantity': 20}]}
+2025-05-19 23:40:54,649 - database.mongodb - INFO - [DEBUG] Converted product ID to string: 682b7affb5434504b423b164
+2025-05-19 23:40:55,032 - aiogram.event - INFO - Update id=102964070 is handled. Duration 1018 ms by bot id=7573060547
+2025-05-19 23:41:04,051 - aiogram.event - INFO - Update id=102964071 is handled. Duration 170 ms by bot id=7573060547
+2025-05-19 23:41:09,724 - aiogram.event - INFO - Update id=102964072 is handled. Duration 440 ms by bot id=7573060547
+2025-05-19 23:41:17,921 - database.mongodb - INFO - [DEBUG] Attempting to get product with ID: 682b7affb5434504b423b164
+2025-05-19 23:41:18,133 - database.mongodb - INFO - [DEBUG] Found product in database: {'_id': ObjectId('682b7affb5434504b423b164'), 'name': 'Dndjdj', 'category': 'Тестовая категория 2', 'price': 48484, 'description': 'Jfjfjf', 'photo': 'AgACAgIAAxkBAAMSaCt3XR9e4CkdiVfqyED6rvsypCgAAtnyMRvJFVhJO-y7cEK3j5wBAAMCAAN5AAM2BA', 'available': True, 'flavors': [{'name': '20', 'quantity': 20}]}
+2025-05-19 23:41:18,134 - database.mongodb - INFO - [DEBUG] Converted product ID to string: 682b7affb5434504b423b164
+2025-05-19 23:41:19,047 - aiogram.event - INFO - Update id=102964073 is handled. Duration 1552 ms by bot id=7573060547
+2025-05-19 23:41:23,261 - aiogram.event - INFO - Update id=102964074 is handled. Duration 1078 ms by bot id=7573060547
+2025-05-19 23:41:31,662 - aiogram.event - INFO - Update id=102964075 is handled. Duration 219 ms by bot id=7573060547
+2025-05-19 23:41:35,251 - handlers.admin_handlers - INFO - Successful admin login for user 531632690
+2025-05-19 23:41:35,417 - aiogram.event - INFO - Update id=102964076 is handled. Duration 168 ms by bot id=7573060547
+2025-05-19 23:41:37,633 - aiogram.event - INFO - Update id=102964077 is handled. Duration 608 ms by bot id=7573060547
+2025-05-19 23:41:40,199 - aiogram.event - INFO - Update id=102964078 is handled. Duration 838 ms by bot id=7573060547
+2025-05-19 23:41:42,191 - aiogram.event - INFO - Update id=102964079 is handled. Duration 382 ms by bot id=7573060547
+2025-05-19 23:41:44,124 - aiogram.event - INFO - Update id=102964080 is handled. Duration 643 ms by bot id=7573060547
+2025-05-19 23:41:48,479 - database.mongodb - INFO - Sleep mode updated: enabled=True, end_time=10:00
+2025-05-19 23:41:48,709 - aiogram.event - INFO - Update id=102964081 is handled. Duration 449 ms by bot id=7573060547
+2025-05-19 23:41:53,287 - aiogram.event - INFO - Update id=102964082 is handled. Duration 188 ms by bot id=7573060547
+2025-05-19 23:41:55,861 - aiogram.event - INFO - Update id=102964083 is handled. Duration 194 ms by bot id=7573060547
+2025-05-19 23:42:01,011 - aiogram.event - INFO - Update id=102964084 is handled. Duration 450 ms by bot id=7573060547
+2025-05-19 23:42:03,133 - aiogram.event - INFO - Update id=102964085 is handled. Duration 321 ms by bot id=7573060547
+2025-05-19 23:42:12,056 - aiogram.dispatcher - INFO - Polling stopped
+2025-05-19 23:42:12,315 - aiogram.dispatcher - INFO - Polling stopped for bot @platform_shop_bot id=7573060547 - 'Platform_shop_bot'
+2025-05-19 23:42:12,317 - root - INFO - Bot stopped gracefully
